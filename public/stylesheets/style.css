@@ -1,0 +1,84 @@
+body {
+  padding: 20px 50px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 20px;
+  width: 100%;
+  margin-bottom: 10px; }
+  header form {
+    display: flex;
+    align-items: center; }
+    header form label {
+      font-weight: 300;
+      margin-right: 8px; }
+    header form input {
+      border: 0;
+      border-bottom: 1px solid black; }
+    header form button {
+      border: 0;
+      background-color: royalblue;
+      color: #fff;
+      margin-left: 12px;
+      font-weight: 800;
+      padding: 5px 15px;
+      border-radius: 5px; }
+
+.result-wrapper .top-row {
+  width: 100%;
+  display: flex; }
+  .result-wrapper .top-row h1 {
+    width: 75%;
+    margin-left: 20px; }
+  .result-wrapper .top-row img {
+    width: 5%;
+    object-fit: contain; }
+
+.result-wrapper h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px; }
+  .result-wrapper h1 b {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #b1b1b1;
+    font-weight: 300; }
+
+.result-wrapper .info-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+  .result-wrapper .info-wrapper .wrapper {
+    width: 33%;
+    padding-left: 5%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 15px 0 0;
+    padding: 15px 0 15px; }
+    .result-wrapper .info-wrapper .wrapper h3 {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0;
+      margin-top: 5px;
+      font-size: 12px; }
+    .result-wrapper .info-wrapper .wrapper span {
+      font-weight: 800;
+      font-size: 32px; }
+    .result-wrapper .info-wrapper .wrapper .extra-content {
+      display: flex;
+      flex-direction: column;
+      color: #b1b1b1;
+      margin-top: 5px; }
+      .result-wrapper .info-wrapper .wrapper .extra-content h3 {
+        font-size: 12px;
+        margin: 0; }
+      .result-wrapper .info-wrapper .wrapper .extra-content span {
+        font-size: 12px; }
+      .result-wrapper .info-wrapper .wrapper .extra-content p {
+        margin: 0;
+        font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */

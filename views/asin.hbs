@@ -1,0 +1,97 @@
+<header>
+  <form action="/asin" method="get">
+<label>Ingrese un ASIN</label>
+<input name="asin"></input>
+<button>BUSCAR</button>
+</form>
+</header>
+<div class="result-wrapper">
+  <div class="top-row">
+  <img src="{{productoData.imgs.main.url}}" alt="">
+  <h1><b>Producto Analizado</b>{{productoData.title.content}}</h1>
+  </div>
+  <div class="info-wrapper">
+    <div class="wrapper">
+      <span>{{productoData.title.score}}%</span>
+      <h3>Title Content</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.precio.content}}€</span>
+      <h3>Precio</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.imgs.score}}%</span>
+      <h3>Imágenes</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.description.score}}%</span>
+      <h3>Bullets</h3>
+      </p>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.description.bulletsPerformanceAvg}}%</span>
+      <h3>Bullets Performance</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.detallesTecnicos.score}}</span>
+      <h3>Technical content</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.cantidadReviews.score}}</span>
+      <h3>Market reviews</h3>
+    </div>
+    <div class="wrapper">
+      <span style="color: rgb(192, 184, 79)">{{productoData.cantidadReviews.calificacion}}</span>
+      <h3>Consumer reviews</h3>
+    </div>
+    <div class="wrapper">
+       {{#if productoData.aPlusProduct.content}}
+      <span style="color: rgb(79, 192, 79)">SI</span>
+      {{else}}
+      <span style="color: rgb(192, 79, 79)">NO</span>
+      {{/if}}
+      <h3>Contenido aPlus del Producto</h3>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.categorias.principal}}</span>
+      <h3>Categoría Principal</h3>
+      <div class="extra-content">
+        <p> Categorías secundarias: <br>
+        {{#each productoData.categorias.secundarias}}
+          <span>{{this}}</span><br>
+        </p>
+        {{/each}}
+      </div>
+    </div>
+    <div class="wrapper">
+      <span>{{productoData.enviado.score}}%</span>
+      <h3>Customer Visibility</h3>
+      <div class="extra-content">
+        <p> Vendido por:
+          <span>{{productoData.vendido.content}}</span>
+        </p>
+        <p> Enviado por:
+          <span>{{productoData.enviado.content}}</span>
+        </p>
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      {{#if productoData.aPlusBrand.content}}
+      <span style="color: rgb(79, 192, 79)">SI</span>
+      {{else}}
+      <span style="color: rgb(192, 79, 79)">NO</span>
+      {{/if}}
+      <h3>Contenido aPlus de la Marca</h3>
+    </div>
+
+    {{!-- let productoData = {
+
+    categorias: {
+    principal: categoriasFinales[0],
+    secundarias: categoriasFinales.splice(1, categoriasFinales.length)
+    },
+
+    } --}}
+  </div>
+</div>
